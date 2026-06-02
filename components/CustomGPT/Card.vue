@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <VCard density="comfortable" class="shadow-card" rounded="card">
+    <VCard density="comfortable" class="shadow-card" rounded="2xl">
         <template v-if="$slots.title || $slots.subTitle">
             <slot name="title-wrapper">
                 <VCardItem :class="{ 'p-0': noTitlePadding }">
