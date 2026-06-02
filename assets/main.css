@@ -6,6 +6,9 @@ body {
     color: #565656;
 }
 
+/* Buttons: remove Vuetify's default uppercase + tracking */
+.v-btn { text-transform: none !important; letter-spacing: normal !important; }
+
 /* Vuetify rounded="card" → Tailwind .rounded-card (6px) handled automatically */
 /* Extra safety override for VCard shadow */
 .v-card.shadow-card {
