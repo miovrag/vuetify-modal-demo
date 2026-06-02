@@ -47,9 +47,10 @@ export default defineNuxtPlugin((app) => {
             },
         },
         defaults: {
-            // $button-elevation: ('default': 2, 'hover': 4, 'active': 2) — matches SCSS production
-            // variant="flat" buttons (PrimaryButton etc.) suppress elevation; non-flat buttons get 2
-            VBtn: { elevation: 2 },
+            // elevation: 0 on all buttons — ghost/outlined buttons must never have shadow.
+            // The SCSS $button-elevation applies to Vuetify's material shadow system; our design
+            // uses token-based shadows (shadow-cta) applied explicitly via Tailwind class only on CTAs.
+            VBtn: { elevation: 0 },
 
             // Cards: elevation handled by shadow-card Tailwind class (!important wins over elevation)
             // $card-elevation: 6 in SCSS — shadow-card overrides this, no JS default needed
