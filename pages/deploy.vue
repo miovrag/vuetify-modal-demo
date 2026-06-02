@@ -345,7 +345,7 @@ function copyBlock(id, text) {
         <main class="flex-1 overflow-y-auto">
 
             <!-- ── Share tab ─────────────────────────────────────── -->
-            <div v-if="activeTab === 'share'" class="max-w-2xl mx-auto px-8 py-8">
+            <div v-if="activeTab === 'share'" class="max-w-3xl px-8 py-8">
 
                 <!-- Share link -->
                 <section class="mb-8">
