@@ -218,12 +218,12 @@ export default {
                 h3: { fontSize: '26px', lineHeight: '36px', fontWeight: '500' },
                 h4: { fontSize: '22px', lineHeight: '30px', fontWeight: '500' },
                 h5: { fontSize: '18px', lineHeight: '24px', fontWeight: '500' },
-                h6: { fontSize: '15px', lineHeight: '21px', fontWeight: '500' },
-                p: { fontSize: '15px', lineHeight: '22px' },
+                h6: { fontSize: '0.875rem', lineHeight: '1.25rem', fontWeight: '500' },  /* text-sm 14px */
+                p:  { fontSize: '1rem',    lineHeight: '1.5rem' },                        /* text-base 16px */
             })
             addComponents({
-                '.paragraph-small': { fontSize: '13px', lineHeight: '20px' },
-                '.paragraph-extra-small': { fontSize: '11px', lineHeight: '16px' },
+                '.paragraph-small':       { fontSize: '0.875rem', lineHeight: '1.25rem' }, /* text-sm  14px */
+                '.paragraph-extra-small': { fontSize: '0.75rem',  lineHeight: '1rem'    }, /* text-xs  12px */
             })
         }),
     ],
