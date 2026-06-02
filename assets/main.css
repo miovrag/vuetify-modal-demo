@@ -1,0 +1,19 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    background-color: #F5F5F5;
+    color: #565656;
+}
+
+/* Vuetify rounded="card" → Tailwind .rounded-card (6px) handled automatically */
+/* Extra safety override for VCard shadow */
+.v-card.shadow-card {
+    box-shadow: 0px 4px 18px 0px rgba(75, 70, 92, 0.10) !important;
+}
+
+/* Switch custom thumb/track styling (from production Switch.vue) */
+.v-switch .v-switch__thumb { background-color: #999999; }
+.v-switch[data-checked='true'] .v-switch__thumb { background-color: white; }
+.v-switch .v-switch__track { background-color: white; border: 1px solid #999999; }
+.v-switch[data-checked='true'] .v-switch__track { border: 0; }
