@@ -2,17 +2,15 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { h } from 'vue'
+import { Icon } from '@iconify/vue'
 
-const tablerIconSet = {
+const iconifySet = {
     component: (props) =>
-        h('i', {
-            class: `ti ti-${props.icon}`,
-            style: {
-                fontSize: typeof props.size === 'number'
-                    ? `${props.size}px`
-                    : props.size === 'default' ? '24px' : props.size,
-                color: props.color ?? undefined,
-            },
+        h(Icon, {
+            icon: props.icon,
+            width:  props.size === 'default' || props.size === undefined ? 24 : props.size,
+            height: props.size === 'default' || props.size === undefined ? 24 : props.size,
+            style: props.color ? { color: props.color } : {},
         }),
 }
 
@@ -21,8 +19,8 @@ export default defineNuxtPlugin((app) => {
         components,
         directives,
         icons: {
-            defaultSet: 'tabler',
-            sets: { tabler: tablerIconSet },
+            defaultSet: 'iconify',
+            sets: { iconify: iconifySet },
         },
         theme: {
             defaultTheme: 'customgpt',

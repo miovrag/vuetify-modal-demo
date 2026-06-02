@@ -26,10 +26,6 @@ export default defineNuxtConfig({
         head: {
             link: [
                 {
-                    rel: 'stylesheet',
-                    href: 'https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.29.0/dist/tabler-icons.min.css',
-                },
-                {
                     rel: 'preconnect',
                     href: 'https://fonts.googleapis.com',
                 },
